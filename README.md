@@ -14,6 +14,7 @@ I am an **Artificial Intelligence Analyst**, passionate about all things data! H
 - Annotating datasets for NLP projects.
 
 ## Connect with Me:
+jonanthan.alleyne@cynatglobal.com
 Check out my repos, and let’s collaborate on data-driven projects!
 
 <!--
