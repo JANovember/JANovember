@@ -30,6 +30,41 @@ def standardize_column_headers(df):
     print(f'Headers standardized to lowercase and removed whitespace/underscores.')
     return df
 ```
+### Filtering necessary columns
+```
+def filter_dataframe(df, columns_to_keep):
+    """
+    Filters a DataFrame to retain only specified columns, with error handling and logging.
+
+    Parameters:
+        df (pd.DataFrame): The input DataFrame.
+        columns_to_keep (list): List of column names to retain.
+
+    Returns:
+        pd.DataFrame: A filtered DataFrame with only the specified columns.
+    """
+    try:
+        # Validate columns to keep
+        valid_columns = [col for col in columns_to_keep if col in df.columns]
+        
+        if not valid_columns:
+            logging.warning("None of the specified columns are in the DataFrame. Returning an empty DataFrame.")
+            return pd.DataFrame()  # Return an empty DataFrame if no valid columns
+
+        # Log any missing columns
+        missing_columns = set(columns_to_keep) - set(valid_columns)
+        if missing_columns:
+            logging.warning(f"The following columns were not found in the DataFrame: {missing_columns}")
+
+        # Keep only the valid columns
+        filtered_df = df[valid_columns]
+        logging.info(f"Successfully filtered DataFrame. Retained columns: {valid_columns}")
+        return filtered_df
+
+    except Exception as e:
+        logging.error(f"An error occurred while filtering the DataFrame: {e}")
+        raise  # Re-raise the exception after logging
+```
 
 ### Validating email addresses
 ```
