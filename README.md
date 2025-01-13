@@ -1,6 +1,6 @@
-#Step Into My Digital Lab! 🔍
+# Step Into My Digital Lab! 🔍
 
-I am an **Artificial Intelligence Analyst**, passionate about all things data! Here’s what I do:
+An **Artificial Intelligence Analyst**, passionate about all things data!
 
 ## What I Do:
 - 🔄 Clean and preprocess messy data.
